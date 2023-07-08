@@ -80,12 +80,15 @@ function createGalleryItem({
   downloads,
 }) {
   return `<div class="photo-card">
-  <a class="gallery__link" href="${largeImageURL}">
+  <div class="photo">
+  <a href="${largeImageURL}">
     <img
       class="gallery__image"
       src="${webformatURL}"
       alt="${tags}"
     />
+    </a>
+    </div>
     <div class="info">
     <p class="info-item">
       <b>Likes</b> ${likes}
@@ -100,8 +103,7 @@ function createGalleryItem({
       <b>Downloads</b> ${downloads}
     </p>
     </div>
-  </a>
-</div>`;
+  </div>`;
 }
 
 function clearImgList() {
